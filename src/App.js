@@ -377,6 +377,7 @@ const renderMints = () => {
 						</div>
 					</header>
 				</div>
+				<b>We Got You! Get The Cheapest Domain For You 🫵</b>
 				{/* This will hide the connect button if currentAccount isn't empty*/}
 				{!currentAccount && renderNotConnectedContainer()}
 

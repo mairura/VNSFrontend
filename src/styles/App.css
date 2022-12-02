@@ -55,12 +55,13 @@ header{
 
 .right{
   display: flex;
-  background: black;
+  background: transparent;
   border-radius: 16px;
   padding: 12px 20px;
   height: 99%;
   margin-right: 10%;
   margin-top: 10px;
+  border: 1px solid;
 }
 
 .content-container {
@@ -171,7 +172,8 @@ header{
 input{
   border: 0;
   border-radius: 12px;
-  background-color: rgb(61, 231, 61);
+  background-color: transparent;
+  border: 1px solid;
   color: white;
   letter-spacing: 1px;
   font-size: 26px;
