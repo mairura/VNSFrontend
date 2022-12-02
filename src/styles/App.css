@@ -321,6 +321,19 @@ input:focus {
   }
 }
 
+@media screen and (max-width: 620px) {
+  .left-container{
+    padding-top: 15px;
+    width: auto;
+  }
+  .title{
+    font-size: 23px;
+  }
+  .subtitle{
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 565px){
   .left-container{
     padding-top: 20px;

@@ -15,7 +15,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 //Domain i would be minting
 const tld = ".vlx"; 
-const CONTRACT_ADDRESS="0xfe9938d3A0a888A07B9820AC5d68dddEf5c03cC7";
+const CONTRACT_ADDRESS="0x0396C2b22c36178d72A5c6da0b364c6c0192C539";
 
 const App = () => {
 	const [mints, setMints] = useState([]);
