@@ -16,7 +16,7 @@ The idea of unstoppable domains imply in the essence that once one has set up a 
 This concept build to reduce the cost of paying for domains, the attempts of bringing it down upon unpayment and keeping them secure. 
 
 # Check out
-Managed to deploy frontend part check it out https://velasns.netlify.app/
+Managed to deploy frontend part check it out https://main--velasns.netlify.app/
 
 ### What is the `.vscode` Folder?
 If you use VSCode to build your app, we included a list of suggested extensions that will help you build this project! Once you open this project in VSCode, you will see a popup asking if you want to download the recommended extensions :).
