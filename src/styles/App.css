@@ -239,6 +239,12 @@ input:focus {
   box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.2);
 }
 
+/*Toastify*/
+.toast-notify{
+  background-color: transparent;
+  border: none;
+}
+
 /* Different background-colour for every nth mint-item */
 .mint-item:nth-child(2n) {
   background-color: lightblue;
@@ -327,10 +333,23 @@ input:focus {
     width: auto;
   }
   .title{
-    font-size: 23px;
+    font-size: 20px;
   }
   .subtitle{
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .left-container{
+    padding-top: 15px;
+    width: auto;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .subtitle{
+    font-size: 12px;
   }
 }
 
@@ -340,8 +359,11 @@ input:focus {
     text-align: left;
   }
   .title{
-    font-size: 20px;
+    font-size: 15px;
   } 
+  .subtitle{
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 509px){
@@ -404,4 +426,21 @@ input:focus {
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 390px){
+  .left-container{
+    padding-top: 20px;
+    text-align: left;
+  }
+  .title{
+    font-size: 12px;
+  } 
+  .subtitle{
+    font-size: 10px;
+  }
+  .subdomain{
+    font-size: 12px;
+  }
+}
+
 

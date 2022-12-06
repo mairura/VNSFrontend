@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import {ethers} from "ethers";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import contractAbi from './utils/contractABI.json';
 import light from './assets/light.png';
@@ -15,7 +17,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 //Domain i would be minting
 const tld = ".vlx"; 
-const CONTRACT_ADDRESS="0x0396C2b22c36178d72A5c6da0b364c6c0192C539";
+const CONTRACT_ADDRESS="0x65D5a99299045C3F1F33B070DddD45d7DA9a2a3b";
 
 const App = () => {
 	const [mints, setMints] = useState([]);
@@ -49,6 +51,7 @@ const App = () => {
 			console.log("Connected", accounts[0]);
 			setCurrentAccount(accounts[0]);
 		}catch(error) {
+			toast.error("Error connecting to metamask 😟");
 			console.log(error);
 		}
 	}
@@ -143,6 +146,7 @@ const App = () => {
 		//Calculate price based on length of domain
 		const price = domain.length === 3 ? "0.00005" : domain.length === 4 ? "0.00003" : "0.00001";
 		console.log("Minting domain", domain, "with price", price);
+		toast.info("Minting...🏋️");
 		try{
 			const  {ethereum } = window;
 			if(ethereum) {
@@ -158,11 +162,13 @@ const App = () => {
 				//Check if the tx was successfully completed
 				if(receipt.status === 1) {
 					console.log("Domain minted check it out https://evmexplorer.testnet.velas.com/tx/"+tx.hash);
+					toast.info("Domain minted 🥳");
 
 					tx = await contract.setRecord(domain, record);
 					await tx.wait();
 
 					console.log("Record set https://evmexplorer.testnet.velas.com/tx/"+tx.hash);
+					toast.info("Record set 🎉");
 
 					  
 				// Call fetchMints after 2 seconds
@@ -179,6 +185,7 @@ const App = () => {
 			}
 		}catch(error){
 			console.log(error);
+			toast.error("Limited gas 😞");
 		}
 	}
 
@@ -220,6 +227,7 @@ const App = () => {
 	const updateDomain = async () => {
 		if (!record || !domain) { return }
 		setLoading(true);
+		toast.info("Updating domain 🤗");
 		console.log("Updating domain", domain, "with record", record);
 		  try {
 		  const { ethereum } = window;
@@ -231,6 +239,7 @@ const App = () => {
 			let tx = await contract.setRecord(domain, record);
 			await tx.wait();
 			console.log("Record set https://evmexplorer.testnet.velas.com/tx/"+tx.hash);
+			toast.success("Updated domain 🥳");
 	  
 			fetchMints();
 			setRecord('');
@@ -396,6 +405,18 @@ const renderMints = () => {
 						rel="noreferrer"
 					>{`built by @${TWITTER_HANDLE}`}</a>
 				</div>
+				<ToastContainer
+					position="top-right"
+					autoClose={5000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss
+					draggable
+					pauseOnHover
+				/>
+				<ToastContainer />
 			</div>
 		</div>
 	);
