@@ -1,4 +1,4 @@
-# buildspace DNS starter project
+# Velas DNS starter project
 
 ### **Welcome 👋**
 
@@ -8,7 +8,14 @@ To get started with this course, clone this repo and follow these commands:
 2. Run `npm run start` to start the project
 3. Start coding!
 
-#Check out
+
+# How it works
+This is a replica of unstoppable domains in that it allows one to set up theie domain names with a prefixed extention which would point out to their
+websites.
+The idea of unstoppable domains imply in the essence that once one has set up a doamin on velas blockchain, it is secure forever.
+This concept build to reduce the cost of paying for domains, the attempts of bringing it down upon unpayment and keeping them secure. 
+
+# Check out
 Managed to deploy frontend part check it out https://velasns.netlify.app/
 
 ### What is the `.vscode` Folder?
