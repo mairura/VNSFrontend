@@ -184,8 +184,10 @@ const App = () => {
 				}
 			}
 		}catch(error){
-			console.log(error);
-			toast.error("Limited gas 😞");
+			error = JSON.parse(JSON.stringify(error))
+			
+			console.log("Error ", error.reason);
+			toast.error(error.reason);
 		}
 	}
 
