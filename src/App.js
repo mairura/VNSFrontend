@@ -405,6 +405,7 @@ const renderMints = () => {
 						rel="noreferrer"
 					>{`built by @${TWITTER_HANDLE}`}</a>
 				</div>
+				<div><img className='footer-logo' src={light} alt="logo"/></div>
 				<ToastContainer
 					position="top-right"
 					autoClose={5000}

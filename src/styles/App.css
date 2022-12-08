@@ -269,6 +269,10 @@ input:focus {
 
 .underlined:hover{
   cursor: pointer;
+} 
+
+.footer-logo{
+  padding-bottom: 40px;
 }
 
 /* KeyFrames */
