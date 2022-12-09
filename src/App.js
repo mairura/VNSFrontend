@@ -52,7 +52,7 @@ const App = () => {
 			setCurrentAccount(accounts[0]);
 		}catch(error) {
 			toast.error("Error connecting to metamask 😟");
-			console.log(error);
+			console.log(error.message);
 		}
 	}
 
@@ -87,10 +87,10 @@ const App = () => {
 				  ],
 				});
 			  } catch (error) {
-				console.log(error);
+				console.log(error.message);
 			  }
 			}
-			console.log(error);
+			console.log(error.message);
 		  }
 		} else {
 		  // If window.ethereum is not found then MetaMask is not installed
@@ -220,7 +220,7 @@ const App = () => {
 		  setMints(mintRecords);
 		  }
 		} catch(error){
-		  console.log(error);
+		  console.log(error.message);
 		}
 	  }
 
@@ -247,7 +247,7 @@ const App = () => {
 			setDomain('');
 		  }
 		  } catch(error) {
-			console.log(error);
+			console.log(error.message);
 		  }
 		setLoading(false);
 	  }
