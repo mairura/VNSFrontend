@@ -184,7 +184,7 @@ const App = () => {
 				}
 			}
 		}catch(error){
-			error = JSON.parse(JSON.stringify(error)).reason;
+			error = JSON.stringify(error).reason;
 			console.log("Error ", error);
 			toast.error(error.reason);
 		}
